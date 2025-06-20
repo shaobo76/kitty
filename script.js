@@ -8,11 +8,11 @@ function animateHelloKitty() {
   // Horizontal movement (larger range)
   const positionX = Math.sin(angle) * 100; // Moves between -100px and 100px
 
-  // Vertical bounce (smaller range)
-  const positionY = Math.abs(Math.sin(angle * 2)) * -20; // Bounces up by 20px. abs() makes it bounce up.
+  // Vertical bounce (adjusted for taller figure)
+  const positionY = Math.abs(Math.sin(angle * 2)) * -15; // Bounces up by 15px.
 
-  // Subtle rotation
-  const rotation = Math.sin(angle * 1.5) * 10; // Rotates between -10deg and 10deg
+  // Subtle rotation (adjusted for taller figure)
+  const rotation = Math.sin(angle * 1.5) * 7; // Rotates between -7deg and 7deg
 
   helloKitty.style.transform = `translateX(${positionX}px) translateY(${positionY}px) rotate(${rotation}deg)`;
 
