@@ -24,18 +24,27 @@ h1 {
   /* No background or border here, it's just a container for transform */
 }
 
+#kitty-image {
+  width: auto;
+  height: 100%; /* Make image take full height of parent */
+  max-width: 100%; /* Ensure it doesn't overflow parent width */
+  display: block;
+  margin: 0 auto; /* Center the image horizontally */
+  object-fit: contain; /* Scale image to fit while maintaining aspect ratio */
+}
+
+/*
 #hello-kitty-head {
   width: 150px;
   height: 130px;
   background-color: white;
   border: 2px solid black;
-  border-radius: 50% 50% 45% 45% / 60% 60% 40% 40%; /* Oval shape for head */
-  position: relative; /* For positioning facial features and bow */
-  z-index: 2; /* Head should be above body/dress parts if they overlap slightly */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow for head */
+  border-radius: 50% 50% 45% 45% / 60% 60% 40% 40%;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Bow moved to #hello-kitty-head */
 #hello-kitty-head::before {
   content: '';
   position: absolute;
@@ -43,11 +52,11 @@ h1 {
   right: -15px;
   width: 50px;
   height: 30px;
-  background-color: #ff69b4; /* Hot Pink to match heading */
+  background-color: #ff69b4;
   border: 1px solid black;
   border-radius: 30% 70% 70% 30% / 50% 50% 50% 50%;
   transform: rotate(15deg);
-  z-index: 3; /* Bow on top of head */
+  z-index: 3;
 }
 
 .hello-kitty-body {
@@ -55,55 +64,52 @@ h1 {
   height: 80px;
   background-color: white;
   border: 2px solid black;
-  border-radius: 20px 20px 30px 30px; /* Simple body shape */
+  border-radius: 20px 20px 30px 30px;
   position: absolute;
-  top: 100px; /* Position below the head */
+  top: 100px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
 }
 
 .hello-kitty-dress {
-  width: 130px; /* Wider than body */
+  width: 130px;
   height: 90px;
-  background-color: #ffc0cb; /* Pink */
+  background-color: #ffc0cb;
   border: 2px solid black;
   position: absolute;
-  top: 100px; /* Same top as body, or slightly lower to overlap */
+  top: 100px;
   left: 50%;
   transform: translateX(-50%);
-  border-radius: 0 0 40% 40%; /* A-line/trapezoid shape */
-  /* Clip path for trapezoid if border-radius isn't enough: clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%); */
-  z-index: 1; /* Dress slightly above body, head (z-index:2) above dress */
+  border-radius: 0 0 40% 40%;
+  z-index: 1;
 }
 
-
-/* Eyes - positioning relative to #hello-kitty-head now */
 .eye {
   position: absolute;
   width: 10px;
-  height: 15px; /* Oval eyes */
+  height: 15px;
   background-color: black;
   border-radius: 50%;
-  top: 45px; /* Adjust as needed */
+  top: 45px;
 }
 
 .left-eye {
-  left: 35px; /* Adjust as needed */
+  left: 35px;
 }
 
 .right-eye {
-  right: 35px; /* Adjust as needed */
+  right: 35px;
 }
 
-/* Nose */
 .nose {
   position: absolute;
   width: 15px;
-  height: 10px; /* Oval nose */
-  background-color: #FFD700; /* Gold/Yellow */
+  height: 10px;
+  background-color: #FFD700;
   border-radius: 50%;
-  top: 70px; /* Adjust as needed */
+  top: 70px;
   left: 50%;
-  transform: translateX(-50%); /* Center the nose */
+  transform: translateX(-50%);
 }
+*/

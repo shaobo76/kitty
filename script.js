@@ -1,4 +1,4 @@
-const helloKitty = document.getElementById('hello-kitty-animation');
+const helloKitty = document.getElementById('kitty-image');
 
 let angle = 0; // Angle for sinusoidal movement
 
