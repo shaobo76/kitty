@@ -1,0 +1,72 @@
+body {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #fff0f5; /* Lavender Blush - a light pink */
+  font-family: 'Arial', sans-serif; /* Clean sans-serif font */
+}
+
+h1 {
+  color: #ff69b4; /* Hot Pink */
+  margin-bottom: 30px; /* Space between heading and animation */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+  font-size: 2.5em; /* Larger font size */
+}
+
+#hello-kitty-animation {
+  width: 150px; /* Adjusted size for a head shape */
+  height: 130px; /* Adjusted size for a head shape */
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50% 50% 45% 45% / 60% 60% 40% 40%; /* Oval shape for head */
+  position: relative; /* For positioning pseudo-elements and inner divs */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Bow using ::before */
+#hello-kitty-animation::before {
+  content: '';
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  right: -15px; /* Adjust to place it on the side of the head */
+  width: 50px;
+  height: 30px;
+  background-color: pink;
+  border: 1px solid black;
+  border-radius: 30% 70% 70% 30% / 50% 50% 50% 50%; /* Simple bow shape */
+  transform: rotate(15deg); /* Tilt the bow */
+  z-index: 1; /* Ensure bow is above the head */
+}
+
+/* Eyes */
+.eye {
+  position: absolute;
+  width: 10px;
+  height: 15px; /* Oval eyes */
+  background-color: black;
+  border-radius: 50%;
+  top: 45px; /* Adjust as needed */
+}
+
+.left-eye {
+  left: 35px; /* Adjust as needed */
+}
+
+.right-eye {
+  right: 35px; /* Adjust as needed */
+}
+
+/* Nose */
+.nose {
+  position: absolute;
+  width: 15px;
+  height: 10px; /* Oval nose */
+  background-color: #FFD700; /* Gold/Yellow */
+  border-radius: 50%;
+  top: 70px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%); /* Center the nose */
+}
